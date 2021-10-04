@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>РЦР "Екатеринбург" техрадар</title>
+<link rel="shortcut icon" href="https://www.zalando.de/favicon.ico">
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="radar.js"></script>
+
+<link rel="stylesheet" href="radar.css">
+</head>
+
+<body>
+
+<svg id="radar"></svg>
+
+<script>
+radar_visualization({
+  svg_id: "radar",
+  width: 1450,
+  height: 1000,
+  colors: {
+    background: "#fff",
+    grid: "#bbb",
+    inactive: "#ddd"
+  },
+  title: 'Технологический радар FrontEnd',
+  quadrants: [
+    { name: "Data Management" },
+    { name: "Languages & Frameworks" },
+    { name: "Platform & Infrastructure" },
+    { name: "Techniques & Tools" },
+  ],
+  rings: [
+    { name: "ADOPT", color: "#93c47d" },
+    { name: "TRIAL", color: "#93d2c2" },
+    { name: "ASSESS", color: "#fbdb84" },
+    { name: "HOLD", color: "#efafa9" }
+  ],
+  print_layout: true,
+  // zoomed_quadrant: 0,
+  //ENTRIES
+  entries: [
+	{ quadrant: 0, ring: 0, label: 'Git', active: false },
+  { quadrant: 0, ring: 0, label: 'GitLab', active: false },
+  {
+    quadrant: 0,
+    ring: 0,
+    label: 'Functional programming',
+    active: false
+  },
+  { quadrant: 0, ring: 0, label: 'GraphQL', active: false },
+  { quadrant: 0, ring: 1, label: 'Apollo', active: true },
+  { quadrant: 0, ring: 2, label: 'NextJS', active: true },
+  { quadrant: 0, ring: 3, label: 'Rest', active: false },
+  { quadrant: 0, ring: 3, label: 'Relay', active: false },
+  { quadrant: 1, ring: 0, label: 'TypeScript', active: false },
+  { quadrant: 1, ring: 0, label: 'HTML', active: false },
+  { quadrant: 1, ring: 0, label: 'React', active: false },
+  { quadrant: 1, ring: 1, label: 'Less', active: false },
+  { quadrant: 1, ring: 3, label: 'JavaScript', active: false },
+  { quadrant: 1, ring: 3, label: 'CSS', active: false },
+  { quadrant: 1, ring: 3, label: 'Angular', active: false },
+  { quadrant: 1, ring: 3, label: 'NodeJS', active: false },
+  { quadrant: 2, ring: 0, label: 'Yarn', active: false },
+  { quadrant: 2, ring: 0, label: 'Webpack', active: false },
+  { quadrant: 2, ring: 1, label: 'Jenkins', active: true },
+  { quadrant: 2, ring: 2, label: 'Babel', active: false },
+  { quadrant: 2, ring: 3, label: 'Npm', active: false },
+  {
+    quadrant: 3,
+    ring: 0,
+    label: 'Visual Studio Code',
+    active: false
+  },
+  { quadrant: 3, ring: 1, label: 'Jest', active: false },
+  { quadrant: 3, ring: 1, label: 'ESLint', active: false },
+  { quadrant: 3, ring: 2, label: 'Lerna', active: false },
+  { quadrant: 3, ring: 2, label: 'Cypress', active: true },
+  { quadrant: 3, ring: 2, label: 'Pm2', active: false },
+  { quadrant: 3, ring: 2, label: 'ReactDOM', active: false },
+  { quadrant: 3, ring: 2, label: 'MDX', active: true },
+  { quadrant: 3, ring: 2, label: 'Stitches', active: true },
+  ]
+});
+</script>
+
+</body>
+</html>
